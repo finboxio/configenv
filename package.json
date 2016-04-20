@@ -27,7 +27,9 @@
   "devDependencies": {
     "ava": "^0.14.0",
     "chai": "^3.5.0",
-    "nyc": "^6.4.0"
+    "nyc": "^6.4.0",
+    "snazzy": "^3.0.1",
+    "standard": "^6.0.8"
   },
   "ava": {
     "timeout": "5s",
