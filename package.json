@@ -1,0 +1,47 @@
+{
+  "name": "configenv",
+  "version": "1.0.0",
+  "description": "configurable localenv",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/nyc --check-coverage --lines 100 --functions 100 --branches 100 ./node_modules/.bin/ava",
+    "coverage": "./node_modules/.bin/nyc report --reporter=html",
+    "lint": "./node_modules/.bin/standard | ./node_modules/.bin/snazzy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finboxio/configenv.git"
+  },
+  "keywords": [
+    "localenv"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/finboxio/configenv/issues"
+  },
+  "homepage": "https://github.com/finboxio/configenv#readme",
+  "dependencies": {
+    "localenv": "^0.2.2"
+  },
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "chai": "^3.5.0",
+    "nyc": "^6.4.0"
+  },
+  "ava": {
+    "timeout": "5s",
+    "verbose": true,
+    "files": [
+      "test/*.js"
+    ],
+    "source": [
+      "**/*.js"
+    ]
+  },
+  "nyc": {
+    "exclude": [
+      "test/"
+    ]
+  }
+}
